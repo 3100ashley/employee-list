@@ -26,7 +26,7 @@ function AddEmployee(props) {
         </Modal.Header>
         <Modal.Body>
         <form onSubmit={(e) => {
-           e.preventDefault();
+           e.preventDefault(); 
            setName('')
            setRole('')
            setImg('')
