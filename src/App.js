@@ -1,27 +1,23 @@
-
-import './index.css';
-import Employee from './components/Employee';
-import {useState} from 'react';
-import {v4 as uuidv4} from 'uuid'
-import AddEmployee from './components/AddEmployee';
-import EditEmployee from './components/EditEmployee';
-import Header from "./components/Header"
-import Employees from '../src/pages/Employess';
-import {BrowserRouter, Routes, Route}from 'react-router-dom'
-
+import "./index.css";
+import Employee from "./components/Employee";
+import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
+import AddEmployee from "./components/AddEmployee";
+import EditEmployee from "./components/EditEmployee";
+import Header from "./components/Header";
+import Employees from "../src/pages/Employess";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-
   return (
-    <Header>
-      <BrowserRouter>
+    <BrowserRouter>
+      <Header>
         <Routes>
-          <Route path='/' element={<Employees/>}/>
+          <Route path="/Employees" element={<Employees />} />
         </Routes>
-      </BrowserRouter>
-    </Header>
-  )
-   
+      </Header>
+    </BrowserRouter>
+  );
 }
 
 export default App;
