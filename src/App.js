@@ -2,16 +2,22 @@ import "./index.css";
 import Header from "./components/Header";
 import Employees from "../src/pages/Employess";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dictionary from "./components/Dictionary";
+import Dictionary from "../src/pages/Dictionary";
+import Definition from "../src/pages/Definition";
+import NotFound from "./components/NotFound"
 
 function App() {
   return (
     <BrowserRouter>
       <Header>
         <Routes>
-          <Route path="/Employees" element={<Employees />} />
-          <Route path="/Dictionary" element={<Dictionary />} />
+          <Route path="/employees" element={<Employees />} />
+          <Route path="/dictionary" element={<Dictionary />} />
+          <Route path="/404" element={<NotFound />} />
+          <Route path="/dictionary/:search" element={<Definition />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
+       
       </Header>
     </BrowserRouter>
   );
